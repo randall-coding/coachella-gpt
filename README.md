@@ -20,3 +20,6 @@ gptscript coachella.gpt DJ Snake
 
 ## Deployment 
 https://coachella-gpt.onrender.com/
+
+## How this was made
+[Blog post](https://github.com/randall-coding/coachella-gpt/blob/master/blog/write-up.md)
