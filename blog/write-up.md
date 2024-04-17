@@ -4,7 +4,7 @@ GPTScript is a scripting language designed to automate interactions with OpenAI'
 
 This script will use Coachella's music festival lineup to make personalized band recommendations along with song samples from Spotify.  To skip ahead, the final script is [here](https://github.com/randall-coding/coachella-gpt/blob/master/blog/coachella/coachella.gpt)
 
-![render_input](https://github.com/randall-coding/coachella-gpt/assets/39175191/1b768d71-3d3a-4791-91a2-3254967b239b)
+![render_input](https://github.com/randall-coding/coachella-gpt/assets/39175191/4633f31a-589d-4eab-86e8-85d9319b6c7d)
 
 ## Install GPTScript
 The first thing we need to do is follow these [instructions](https://github.com/gptscript-ai/gptscript) which will vary slightly depending on your operating system.  I'm running on Linux where the installation step is simply:
@@ -243,10 +243,10 @@ For all the $bands given, find 3 spotify song for each -- song name and url.  Ca
 I created a simple Rails [web app](https://github.com/randall-coding/coachella-gpt/tree/master/web) for our tool which calls the script and displays the results in list format.
 The end result looks like this:
 
-![good_results_2](https://github.com/randall-coding/coachella-gpt/assets/39175191/73cb38fe-459e-4b49-ba8e-22f0345e5766)
+![final_output_good_2](https://github.com/randall-coding/coachella-gpt/assets/39175191/09c7d382-b14b-4c5d-8eaa-3f4ab6b09874)
 
 The deployment is [live here](https://coachella-gpt.onrender.com) to try.  It takes a minute to get results right now, so we added a console output from our `gptscript` command to show what is happening in real time.
 
-![command_output_ui](https://github.com/randall-coding/coachella-gpt/assets/39175191/3ec68913-bbd0-4e5b-976b-ac4f857e5f12)
+![console_output](https://github.com/randall-coding/coachella-gpt/assets/39175191/94e15e10-f3f4-4fe8-987c-a32b8cd8e4fe)
 
 This tool shows the power of AI integrations.  We didn't have to write a single api call or complex logic to find / compare similar bands, find songs for bands, or pull the lineup from Coachella.  I will definitely be integrating GPTScript into my future workflows.
