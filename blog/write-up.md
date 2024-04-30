@@ -131,7 +131,7 @@ After running the script again I see `matches.txt` filled with bands.
 
 Better!  But now I'm seeing about a dozen bands and sometimes not the original bands from our input. Let's add some language to our prompt to make the output more specific 
 
-`...This will include the specific bands from the input as well as several suggestions based on those band preferences`
+`...find all bands in lineup.txt that the user might like based on the "bands" input.  This will include the specific bands from the input as well as several suggestions based on those band preferences`
 
 ## Mission 4: Fetching Songs from Spotify
 
