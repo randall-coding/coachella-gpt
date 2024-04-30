@@ -279,4 +279,6 @@ command = "GPTSCRIPT_API_SPOTIFY_COM_BEARER_TOKEN=#{spotify_token} gptscript --d
 
 Finally we will update the front end to have a select for venue which gets passed in as params[:venue]. 
 
+![venue_select](https://github.com/randall-coding/coachella-gpt/assets/39175191/8ee9ac0f-5c19-41bb-af33-5ea5c3a8b137)
+
 This tool shows the power of AI integrations.  We didn't have to write a single api call or complex logic to find / compare similar bands, find songs for bands, or pull the lineup from Coachella.  I will definitely be integrating GPTScript into my future workflows.
