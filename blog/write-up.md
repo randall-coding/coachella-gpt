@@ -181,13 +181,13 @@ Upon running the script, we see songs output for every band we found in `matches
 
 ![matches_txt_good](https://github.com/randall-coding/coachella-gpt/assets/39175191/c9c8a301-02a0-46e4-b795-d8f4569c15c9)
 
+![first_spotify_api_test](https://github.com/randall-coding/coachella-gpt/assets/39175191/775c64e8-e18b-4fde-a5ee-b3d8a433f8ab)
+
 ## Mission 5: Ensure Reliable Outputs
 
 After 3 runs of the script the AI started returning only a single output rather than all bands found in `matches.txt`.  
 
 ![single_output_error_console](https://github.com/randall-coding/coachella-gpt/assets/39175191/d072bea5-8c2a-4a47-bb95-ec2a77e20261)
-
-![first_spotify_api_test](https://github.com/randall-coding/coachella-gpt/assets/39175191/775c64e8-e18b-4fde-a5ee-b3d8a433f8ab)
 
 If `matches.txt` has 10 bands, I'm only getting back the first band.
 
