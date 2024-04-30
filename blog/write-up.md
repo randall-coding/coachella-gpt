@@ -189,9 +189,9 @@ After 3 runs of the script the AI started returning only a single output rather 
 
 ![single_output_error_console](https://github.com/randall-coding/coachella-gpt/assets/39175191/d072bea5-8c2a-4a47-bb95-ec2a77e20261)
 
-If `matches.txt` has 10 bands, I'm only getting back the first band.
+However, `matches.txt` has 10 bands which means the AI is abridging the final output.
 
-After trying a few different fixes, I added the magic words *"do not abridge the list"* to the prompt regarding the final output.  Apparently sometimes the best approach is telling chatGPT what not to do, even if it would seem obvious to a human.  After adding this line, I was able to perform 12 successful runs in a row.
+After trying a few different fixes, I added the magic words *"do not abridge the list"* to the prompt regarding the final output and it worked again.  Apparently sometimes the best approach is telling AI what not to do, even if it would seem obvious to a human.
 
 ## Mission 6: Improve performance 
 Right now our script is taking upwards of 4 minutes to run, so let's see what we can change to increase performance.  
