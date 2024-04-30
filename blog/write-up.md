@@ -196,10 +196,16 @@ After trying a few different fixes, I added the magic words *"do not abridge the
 ## Mission 6: Improve performance 
 Right now our script is taking upwards of 4 minutes to run, so let's see what we can change to increase performance.  
 
+### Not writing to file
 One performance hit appears to be writing to file.  Let's replace language like *"write to matches.txt"* with *"reference this data as $matches"*.  `$matches` is just a variable in memory, rather than a file.  This saves about a minute of run time replacing 3 text files with variables.
 
+### Reusing lineup.txt file
+And since lineup.txt is already written (and should be valid for up to a year) we don't need our script to obtain it each run.  So we will remove that code and just rely on lineup.txt already existing
+
+### Reduce the number of tools being called
 Another performance boost comes from reducing the number of tools being called.  I noticed that there is significant overhead with each additional tool in the call chain.  I started playing around with removing or combining some of the tools I declared.  I reduced my subtools down to just one called `get-spotify-songs`, and the main tool now handles recommendations and simply pulls the coachella lineup from an existing lineup.txt we created using GPTScript.  That saves about another minute.    
 
+### Tighten up the language on inputs and output
 Lastly, I've tightened up the language to be specific about the input going into the tool we want to use *"pass $bands_at_coachella to the get-spotify-songs tool"* for instance.
 
 Our **final script** becomes:
