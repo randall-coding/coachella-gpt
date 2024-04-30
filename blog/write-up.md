@@ -271,6 +271,48 @@ I'm going to repeat the process of creating simple scripts to produce lineup.txt
 But now that we have a lineup file for each venue we will modify those files to have a prefix 
  like to $venue_lineup.txt.  So for example coachella would be coachella_lineup.txt, Jazz Fest will be jazz_fest_lineup.txt, etc.  
 
+Our final script now looks like:
+
+```
+tools: get-spotify-songs, sys.read
+args: bands: A list of bands you like.
+args: venue: place where the event is organized
+description: find bands the user might like at coachella along with 3 songs each
+json response: true
+temperature: 0.2
+
+You are a music expert, concert expert, and web researcher.
+
+Perform the following tasks in order:
+
+In case venue argument is present, lineup file name is ${venue}_lineup.txt. Otherwise, lineup file name is lineup.txt
+
+Read the lineup file and find the exact bands from user's input that are also in lineup.  You will call that data $exact_matches.  $exact_matches will be empty unless the band name is found in both lineup and input.
+
+Then based on the user input, recommend several bands from the lineup file which are in the same genre (up to 5 similar artists).  You will call that data $recommendations.  
+
+Next combine $exact_matches and $recommendations into $bands_at_venue.
+
+Then pass $bands_at_venue to the get-spotify-songs tool to find $spotify_bands.
+
+For all those $spotify_bands found return that output in json format like so: {"bands": [{ "name": <band name string>, "spotifyUrl": url_value, songs: [{"name": value, "url": song_url_value}] },...]}.
+
+Do not abridge the list or miss any items from $spotify_bands and return the final output in one json object.
+
+---
+name: get-spotify-songs
+description: get songs for each artist or band
+args: bands: a list of band
+args: numberOfSongs: number of songs to obtain per band or artist
+tools: search from ./spotify.yaml,get-an-artists-top-tracks from ./spotify.yaml, sys.read
+temperature: 0.3
+internal prompt: false
+
+For all the $bands given, find 3 spotify song for each -- song name and url.  Call that dataset $spotify_bands.
+
+When using the spotify api do not repeat an api call more than 3 times.
+```
+
 We also need to update our script to take in a 'venue' param.  We will designate it with --venue and our normal input with --input.  Our updated command looks like
 
 ```
@@ -281,4 +323,8 @@ Finally we will update the front end to have a select for venue which gets passe
 
 ![venue_select](https://github.com/randall-coding/coachella-gpt/assets/39175191/8ee9ac0f-5c19-41bb-af33-5ea5c3a8b137)
 
-This tool shows the power of AI integrations.  We didn't have to write a single api call or complex logic to find / compare similar bands, find songs for bands, or pull the lineup from Coachella.  I will definitely be integrating GPTScript into my future workflows.
+When we test our app we find it is able to give recommendations for each venue just as easily as the first:
+
+![glastonbury](https://github.com/randall-coding/coachella-gpt/assets/39175191/1a80c732-0a2a-4663-8430-00fe9ca18317)
+
+Look how far we've come in such a short time. This tool shows the power of AI integrations.  We didn't have to write a single api call or complex logic to find / compare similar bands, find songs for bands, or pull the lineup from Coachella.  I will definitely be integrating GPTScript into my future workflows.
