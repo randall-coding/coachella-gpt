@@ -326,4 +326,6 @@ When we test our app we find it is able to give recommendations for each venue j
 
 ![glastonbury](https://github.com/randall-coding/coachella-gpt/assets/39175191/1a80c732-0a2a-4663-8430-00fe9ca18317)
 
+The full code for the music festival app is [here](https://github.com/randall-coding/music-festival-gpt/) 
+
 Look how far we've come in such a short time. This tool shows the power of AI integrations.  We didn't have to write a single api call or any complex logic to find / compare similar bands, find songs for bands, or pull the lineup from Coachella.  I will definitely be integrating GPTScript into my future workflows.
