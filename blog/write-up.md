@@ -319,7 +319,7 @@ We also need to update our script to take in a 'venue' param.  We will designate
 command = "GPTSCRIPT_API_SPOTIFY_COM_BEARER_TOKEN=#{spotify_token} gptscript --disable-cache" + " " + "coachella.gpt" + " --input " + params[:input] + " --venue " + params[:venue] || "coachella"
 ```
 
-Finally we will update the front end to have a select for venue which gets passed in as params[:venue]. 
+Finally we will update the front end to have a select for venue which gets passed in as `params[:venue]`. 
 
 ![venue_select](https://github.com/randall-coding/coachella-gpt/assets/39175191/8ee9ac0f-5c19-41bb-af33-5ea5c3a8b137)
 
