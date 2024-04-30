@@ -208,7 +208,7 @@ Another performance boost comes from reducing the number of tools being called. 
 ### Tighten up the language on inputs and output
 Lastly, I've tightened up the language to be specific about the input going into the tool we want to use *"pass $bands_at_coachella to the get-spotify-songs tool"* for instance.
 
-Our **final script** becomes:
+Our final couchella script becomes:
 
 [*coachella.gpt*]
 ```
@@ -256,5 +256,27 @@ The end result looks like this:
 The deployment is [live here](https://coachella-gpt.onrender.com) to try.  It takes a minute to get results right now, so we added a console output from our `gptscript` command to show what is happening in real time.
 
 ![console_output](https://github.com/randall-coding/coachella-gpt/assets/39175191/94e15e10-f3f4-4fe8-987c-a32b8cd8e4fe)
+
+## Mission 8: Adding more venues 
+Now that we've done this for coachella we can repeat the process for other venues:  
+
+- Lollapalooza
+- Jazz Fest
+- Glastonbury
+- Bottlerock
+- Bonnaroo
+
+I'm going to repeat the process of creating simple scripts to produce lineup.txt files for each music festival.  I'll spare you the details but you can find those scripts [here]().   
+
+But now that we have a lineup file for each venue we will modify those files to have a prefix 
+ like to $venue_lineup.txt.  So for example coachella would be coachella_lineup.txt, Jazz Fest will be jazz_fest_lineup.txt, etc.  
+
+We also need to update our script to take in a 'venue' param.  We will designate it with --venue and our normal input with --input.  Our updated command looks like
+
+```
+command = "GPTSCRIPT_API_SPOTIFY_COM_BEARER_TOKEN=#{spotify_token} gptscript --disable-cache" + " " + "coachella.gpt" + " --input " + params[:input] + " --venue " + params[:venue] || "coachella"
+```
+
+Finally we will update the front end to have a select for venue which gets passed in as params[:venue]. 
 
 This tool shows the power of AI integrations.  We didn't have to write a single api call or complex logic to find / compare similar bands, find songs for bands, or pull the lineup from Coachella.  I will definitely be integrating GPTScript into my future workflows.
