@@ -7,7 +7,7 @@ This script will use Coachella's music festival lineup to make personalized band
 ![render_input](https://github.com/randall-coding/coachella-gpt/assets/39175191/4633f31a-589d-4eab-86e8-85d9319b6c7d)
 
 ## Install GPTScript
-The first thing we need to do is follow these [instructions](https://github.com/gptscript-ai/gptscript) which will vary slightly depending on your operating system.  I'm running on Linux where the installation step is simply:
+The first thing we need to do is follow these [instructions](https://github.com/gptscript-ai/gptscript) to install gptscript.  I'm running on Linux where the installation step is simply:
 
 `curl https://get.gptscript.ai/install.sh | sh` 
 
