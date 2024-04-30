@@ -1,7 +1,7 @@
 tools: get-spotify-songs, sys.read
 args: bands: A list of bands you like.
 description: find bands the user might like at coachella along with 3 songs each
-json response: true
+JSONResponse: true
 temperature: 0.3
 
 You are a music expert, concert expert, and web researcher.
