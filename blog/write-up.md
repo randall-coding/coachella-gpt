@@ -2,7 +2,7 @@
 
 GPTScript is a scripting language designed to automate interactions with OpenAI's language models. In this post, I'll share how I used it to create a useful tool for music enthusiasts. 
 
-This script will use Coachella's music festival lineup to make personalized band recommendations along with song samples from Spotify.  To skip ahead, the final script is [here](https://github.com/randall-coding/coachella-gpt/blob/master/blog/coachella/coachella.gpt)
+This script will use Coachella's music festival lineup to make personalized band recommendations along with song samples from Spotify.  To skip ahead, the final coachella script is [here](https://github.com/randall-coding/coachella-gpt/blob/master/blog/coachella/coachella.gpt) and the final musical festival script is [here](https://github.com/randall-coding/coachella-gpt/blob/master/blog/coachella/music_festival.gpt)
 
 ![render_input](https://github.com/randall-coding/coachella-gpt/assets/39175191/4633f31a-589d-4eab-86e8-85d9319b6c7d)
 
@@ -258,7 +258,7 @@ The deployment is [live here](https://coachella-gpt.onrender.com) to try.  It ta
 ![console_output](https://github.com/randall-coding/coachella-gpt/assets/39175191/94e15e10-f3f4-4fe8-987c-a32b8cd8e4fe)
 
 ## Mission 8: Adding more venues 
-Now that we've done this for coachella we can repeat the process for other venues:  
+Now that we've done this for Coachella we can repeat the process for other venues:  
 
 - Lollapalooza
 - Jazz Fest
@@ -266,10 +266,9 @@ Now that we've done this for coachella we can repeat the process for other venue
 - Bottlerock
 - Bonnaroo
 
-I'm going to repeat the process of creating simple scripts to produce lineup.txt files for each music festival.  I'll spare you the details but you can find those scripts [here]().   
+I'll spare you the details of creating each script to produce lineup.txt files for each music festival. You can find those scripts [here](https://github.com/randall-coding/music-festival-gpt) in the respective venue folder.
 
-But now that we have a lineup file for each venue we will modify those files to have a prefix 
- like to $venue_lineup.txt.  So for example coachella would be coachella_lineup.txt, Jazz Fest will be jazz_fest_lineup.txt, etc.  
+But now that we have a lineup file for each venue we will modify those files to have a prefix like to $venue_lineup.txt.  So for example coachella would be coachella_lineup.txt, Jazz Fest will be jazz_fest_lineup.txt, etc.  
 
 Our final script now looks like:
 
