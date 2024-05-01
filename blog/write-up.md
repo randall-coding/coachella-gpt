@@ -2,7 +2,7 @@
 
 GPTScript is a scripting language designed to automate interactions with OpenAI's language models. In this post, I'll share how I used it to create a useful tool for music enthusiasts. 
 
-This script will use Coachella's music festival lineup to make personalized band recommendations along with song samples from Spotify.  To skip ahead, here is the final [coachella script](https://github.com/randall-coding/coachella-gpt/blob/master/blog/coachella/coachella.gpt) and the final [musical festival script](https://github.com/randall-coding/coachella-gpt/blob/master/blog/coachella/music_festival.gpt).
+This script will use Coachella's music festival lineup to make personalized band recommendations along with song samples from Spotify.  To skip ahead, here is the final [coachella script](https://github.com/randall-coding/coachella-gpt/blob/master/blog/coachella/coachella.gpt) and the final [musical festival script](https://github.com/randall-coding/coachella-gpt/blob/master/blog/coachella/music_festival.gpt).  And [click here](https://music-festival-gpt.onrender.com) for the final running app.
 
 ![render_input](https://github.com/randall-coding/coachella-gpt/assets/39175191/4633f31a-589d-4eab-86e8-85d9319b6c7d)
 
